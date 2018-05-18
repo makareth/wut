@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var AnimalSchema = new Schema({
+var AnimalsSchema = new Schema({
   // Animal chip identification number
   chip_number: {
       type: { type: String, uppercase: true },
