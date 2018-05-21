@@ -1,12 +1,9 @@
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
-
-  Task = require('./src/models/apiModel'),
   bodyParser = require('body-parser');
   
-
-app.set('models', require('./models'));
+app.set('models', require('./src/models'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

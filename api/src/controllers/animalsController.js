@@ -7,10 +7,9 @@ var apiUtils = require('../utils/apiUtils');
 var animalsModel = app.get('models').Animal;
 
 // Retrieves all known animals
-exports.getAll = function(req, res) {
+exports.findAll = function(req, res) {
     
-    console.log(apiUtils.getlogHeader("getAll") );
-
+    console.log(apiUtils.getlogHeader("findAll") );
 
     const promises = [
       new Promise(resolve => animalsModel.findAll())
@@ -27,9 +26,6 @@ exports.getAll = function(req, res) {
         res.send(err);
       });
 
-
-
-    
     animal.find({}, function(err, animal) {
         if (err)
           res.send(err);
